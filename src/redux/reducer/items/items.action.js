@@ -8,7 +8,7 @@ export const getItems=()=>async(dispatch)=>
         const ItemsList=await axios(
             {
                 method:"GET",
-                url:"https://vercel.com/bankushvij/e-commerce-store-backend/items"
+                url:"https://ashion-store-backend.herokuapp.com/api/items"
             }
         )
         return dispatch({ type: GET_ITEMS, payload: ItemsList.data });
@@ -25,7 +25,7 @@ export const getImage=(_id)=>async(dispatch)=>
         const ImageList=await axios(
             {
                 method:"GET",
-                url:`https://vercel.com/bankushvij/e-commerce-store-backend/images/${_id}`,
+                url:`https://ashion-store-backend.herokuapp.com/api/images/${_id}`,
             }
         )
         return dispatch({type:GET_IMAGE,payload:ImageList.data});
