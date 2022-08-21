@@ -21,8 +21,10 @@ function Card(props) {
 
   return (
     <>
+    <div className="w-100 h-100">
       <div
-        className="flex justify-center md:w-1/4 lg:w-1/5 "
+        className="flex justify-center md:w-full lg:w-full "
+      
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}
       >
@@ -73,6 +75,7 @@ function Card(props) {
           </div>
         </div>
       </div>
+        </div>
     </>
   );
 }
